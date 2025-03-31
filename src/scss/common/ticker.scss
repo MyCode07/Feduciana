@@ -1,0 +1,34 @@
+._ticker {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: -1;
+
+    @media (any-hover: hover) {
+        &:hover {
+            .ticker-text {
+                animation-play-state: paused;
+            }
+        }
+    }
+
+    // ._ticker-text
+
+    &-text {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include adaptive-value("gap", 60, 30, 1);
+
+        span {
+         
+        }
+
+        img,
+        svg {
+            flex: 0 0 auto;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "Zona Pro";
+    src: url("../files/ZonaPro-ThinItalic.woff2") format("woff2"), url("../files/ZonaPro-ThinItalic.woff") format("woff");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "Zona Pro";
+    src: url("../files/ZonaPro-Thin.woff2") format("woff2"), url("../files/ZonaPro-Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "Zona Pro";
+    src: url("../files/ZonaPro-Regular.woff2") format("woff2"), url("../files/ZonaPro-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "Zona Pro";
+    src: url("../files/ZonaPro-SemiBold.woff2") format("woff2"), url("../files/ZonaPro-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "Zona Pro";
+    src: url("../files/ZonaPro-ExtraBold.woff2") format("woff2"), url("../files/ZonaPro-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap
+}
