@@ -1,0 +1,42 @@
+.grid {
+    display: grid;
+    gap: 20px;
+
+
+    // grid-2
+
+    &-2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+
+        @media (max-width:768px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    // .grid-3
+
+    &-3 {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+
+        @media (max-width:768px) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 50px;
+        }
+    }
+
+
+    // .grid-4
+
+    &-4 {
+        grid-template-columns: repeat(4, 1fr);
+
+        @media (max-width:768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+
+
+}
