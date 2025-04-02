@@ -19,7 +19,45 @@
         padding: 0;
     }
 
-    &._open {}
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease 0s;
+
+    @media (min-width:1025px) and (max-height: 660px) {
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow-y: auto;
+    }
+
+
+    &._open {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    // .popup__close
+
+    &__close {
+        display: none;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        background-color: transparent;
+z-index: 1;
+
+        img,
+        svg {
+            width: 100%;
+            transform: rotate(45deg);
+            pointer-events: none;
+        }
+
+        @media (max-width:1024px) {
+            display: block;
+        }
+    }
 }
 
 
@@ -43,6 +81,7 @@
         height: 5px;
 
         span {
+            width: 100%;
             height: 100%;
             display: block;
             background-color: #8E7F61;
@@ -149,7 +188,7 @@
         position: relative;
 
         @media (max-width:768px) {
-            padding: 40px 27px 30px 27px;
+            padding: 55px 27px 30px 27px;
         }
 
         .swiper {
@@ -175,6 +214,10 @@
                 h2 {
                     margin-bottom: 24px;
                     max-width: 520px;
+
+                    @media (max-width:1024px){
+                        max-width: 95%;
+                    }
                 }
 
                 label {
@@ -267,17 +310,16 @@
         gap: 10px;
 
         @media (max-width:768px) {
-            margin-left: 0;
             margin-top: 30px;
-            justify-content: flex-start;
         }
 
-        button {
+        span {
             height: 54px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
+            cursor: pointer;
 
 
             // .prev
@@ -306,6 +348,74 @@
 
                 background-color: #8E7F61;
             }
+        }
+    }
+
+    // .quiz__final
+
+    &__final {
+        display: flex;
+        flex-direction: column;
+
+
+        p {
+            max-width: 415px;
+        }
+
+        input {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 600px;
+            background-color: #F4F4F4 !important;
+            border: 1px solid #A9A9A9;
+            font-size: 14px;
+        }
+
+        button {
+            margin-top: 15px;
+            width: 100%;
+            max-width: 600px;
+            font-size: 14px;
+        }
+
+        // .quiz__final-policy
+
+        &-policy {
+            margin-top: auto;
+            font-size: 10px;
+            line-height: 1.3;
+            opacity: 0.6;
+        }
+
+        // .quiz__final-text
+
+        &-text {
+            display: none;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &._final {
+
+        .swiper {
+            @media (min-width:769px) {
+                height: 100%;
+            }
+        }
+
+        .quiz__text,
+        .quiz__btns {
+            display: none;
+        }
+
+        .quiz__final-text {
+            display: block;
         }
     }
 }

@@ -29,6 +29,9 @@ if (sliders.length) {
         }
 
         if (slider.closest('.quiz')) {
+            const fraction = section.querySelector('.fraction span')
+            const btns = section.querySelector('.quiz__btns');
+
             new Swiper(slider, {
                 modules: [Navigation, Pagination],
                 slidesPerView: 1,
@@ -38,6 +41,20 @@ if (sliders.length) {
                     prevEl: prev,
                     nextEl: next,
                 },
+
+                on: {
+                    slideChange: (swiper) => {
+                        let index = swiper.activeIndex + 1
+
+                        fraction.textContent = index;
+
+                        if (index == swiper.slides.length) {
+                            console.log('final');
+                            section.classList.add('_final')
+                        }
+                    }
+                },
+                allowTouchMove: false,
 
                 pagination: {
                     el: pagination,

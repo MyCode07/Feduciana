@@ -146,10 +146,13 @@ section {
 
 .prev,
 .next {
+    user-select: none;
+    
     &.swiper-button-lock {
         display: none;
     }
 
+    &.swiper-button-disabled,
     &[disabled] {
         opacity: 0.5;
     }
